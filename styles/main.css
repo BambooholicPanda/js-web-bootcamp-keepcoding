@@ -1,0 +1,155 @@
+@font-face {
+  font-family: title-font;
+  src: url(../fonts/simpletix.otf);
+}
+
+body {
+  text-align: center;
+  background-color: pink;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-family: title-font;
+}
+
+hr {
+  background-color: hotpink;
+  color: hotpink;
+}
+
+h1 {
+  font-size: 40px;
+  padding: 20px;
+}
+h2 {
+  font-size: 25px;
+}
+h3 {
+  font-size: 20px;
+  background-color: rgb(242, 209, 229);
+  border-radius: 25px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.bankrupt {
+  color: red;
+}
+
+#exp-inc-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+#exp-inc-div h3 {
+  padding-left: 10px;
+}
+
+#total-expenses {
+  color: red;
+}
+
+#total-incomes {
+  color: green;
+}
+
+#transaction-explanation {
+  margin: 10px;
+}
+
+#transaction-form input {
+  display: block;
+  margin: auto;
+  text-align: center;
+  border-radius: 25px;
+}
+
+#transaction-form label {
+  font-weight: bold;
+}
+
+#records-title {
+  margin-top: 10px;
+}
+
+#records-list {
+  border: 2px solid hotpink;
+  background-color: lightpink;
+  border-radius: 25px;
+  overflow-y: auto;
+  height: 350px;
+}
+
+#records-list li {
+  padding: 10px;
+  margin: 10px 10%;
+  display: flex;
+}
+
+#records-list li button {
+  margin-left: auto;
+  font-weight: bold;
+  border-radius: 25px;
+}
+
+#records-list li div {
+  text-align: justify;
+  margin-right: 10px;
+}
+
+.record-incomes {
+  border: 3px solid green;
+  border-radius: 25px;
+}
+
+.record-expenses {
+  border: 3px solid red;
+  border-radius: 25px;
+}
+
+.record-type {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.record-incomes .record-amount {
+  background-color: rgb(194, 243, 194);
+  border-radius: 25px;
+  padding: 5px;
+  text-align: center;
+}
+
+.record-expenses .record-amount {
+  background-color: rgb(247, 145, 145);
+  border-radius: 25px;
+  padding: 5px;
+  text-align: center;
+}
+
+footer {
+  padding: 10px;
+  margin: auto;
+  width: 50%;
+}
+
+/* Esto solo ocurre en PC */
+@media screen and (min-width: 767px) {
+  #records-list {
+    height: 350px;
+    margin: 0px 20%;
+  }
+  #records-list li {
+    margin: 10px 20%;
+  }
+
+  footer {
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    text-align: right;
+  }
+}
