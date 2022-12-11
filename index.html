@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Control</title>
+    <link
+      rel="stylesheet"
+      href="https://meyerweb.com/eric/tools/css/reset/reset.css"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="/js/main.js"></script>
+  </head>
+  <!-- Onload is executed when page loads -->
+  <body onload="loadFromLocalStorage()">
+    <h1>Expense Control</h1>
+    <h2 id="total-savings">
+      Total savings: <span id="total-saved">0.00</span><span>€</span>
+    </h2>
+    <div id="exp-inc-div">
+      <h3>
+        Total expenses: <span id="total-expenses">0.00</span><span>€</span>
+      </h3>
+
+      <h3>Total incomes: <span id="total-incomes">0.00</span><span>€</span></h3>
+    </div>
+    <hr />
+    <!-- Form to add income or expense depending on sign (+/-) -->
+    <p id="transaction-explanation">
+      Type an amount other than 0. Use the "-" sign to add expenses.
+    </p>
+    <form id="transaction-form">
+      <label for="money-amount">Money Amount</label>
+      <input
+        type="number"
+        id="money-amount"
+        onkeyup="isAmountEmpty()"
+        placeholder="+/-"
+        required
+      />
+      <label for="transaction-concept">Concept message</label>
+      <input type="text" id="transaction-concept" placeholder="Optional" />
+      <button
+        type="button"
+        id="add-button"
+        onclick="updateSavings(document.getElementById('money-amount').value, document.getElementById('transaction-concept').value, false)"
+        disabled
+      >
+        Add transaction
+      </button>
+    </form>
+    <hr />
+    <!-- Display of the records array -->
+    <div>
+      <h2 id="records-title">Transaction History</h2>
+      <ul id="records-list"></ul>
+    </div>
+
+    <footer>
+      <p>Andrea Expósito Santana</p>
+      <p>Copyright 2022 ©</p>      
+    </footer>
+  </body>
+</html>
